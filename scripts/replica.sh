@@ -22,8 +22,11 @@ export PATH=/usr/pgsql-9.4/bin:$PATH
 echo "Init db ..."
 sudo /usr/pgsql-9.4/bin/postgresql94-setup initdb -D /var/lib/pgsql/9.4-bdr/data -A trust -U postgres
 
-cp -n /vagrant/replica/pg_hba.conf /var/lib/pgsql/9.4-bdr/data/pg_hba.conf
-cp -n /vagrant/replica/postgresql.conf /var/lib/pgsql/9.4-bdr/data/postgresql.conf
+rm -f /var/lib/pgsql/9.4-bdr/data/pg_hba.conf
+rm -f /var/lib/pgsql/9.4-bdr/data/postgresql.conf
+
+cp /vagrant/replica/pg_hba.conf /var/lib/pgsql/9.4-bdr/data/pg_hba.conf
+cp /vagrant/replica/postgresql.conf /var/lib/pgsql/9.4-bdr/data/postgresql.conf
 
 chown postgres:postgres /var/lib/pgsql/9.4-bdr/data/pg_hba.conf
 chown postgres:postgres /var/lib/pgsql/9.4-bdr/data/postgresql.conf
