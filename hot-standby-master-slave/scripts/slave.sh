@@ -8,7 +8,7 @@ echo "exclude=mirror.smartmedia.net.id, kartolo.sby.datautama.net.id" >> /etc/yu
 
 yum install -y -q atool wget ping nano telnet
 
-yum localinstall -y http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+yum localinstall -y http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-3.noarch.rpm
 
 yum install -y postgresql94 postgresql94-contrib postgresql94-server
 

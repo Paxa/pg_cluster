@@ -1,4 +1,4 @@
-set -e -u
+nstall -q -y http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpmset -e -u
 
 echo "Installing utils..."
 
@@ -8,7 +8,7 @@ yum install -y -q atool wget ping nano telnet
 
 echo "Installing postgres..."
 
-yum install -q -y http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+yum install -q -y http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-3.noarch.rpm
 yum install -q -y http://packages.2ndquadrant.com/postgresql-bdr94-2ndquadrant/yum-repo-rpms/postgresql-bdr94-2ndquadrant-redhat-1.0-2.noarch.rpm
 
 yum install -q -y postgresql-bdr94-bdr
